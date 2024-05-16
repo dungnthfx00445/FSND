@@ -1,11 +1,58 @@
-## Full Stack Web Developer Nanodegree (nd0044 v2)
-This is the public repository for Udacity's Full-Stack Nanodegree program. Here, you can find starter-code the following projects:
+# Capstone Full Stack
 
-* *01_fyyur/starter_code* - This is the project from C1. SQL and Data Modeling for the Web
-* *02_trivia_api/starter* - This is the project from C2. API Development and Documentation
-* *03_coffee_shop_full_stack/starter_code* - This is the project from C3. Identity and Access Management
-* *capstone* - This is the final project of this Nanodegree.
+## Full Stack Capsone Project
 
-Feel free to suggest edits in the current repo by raising a PR.
+Udacity has decided to open a new digitally enabled cafe for students to order drinks, socialize, and study hard. But they need help setting up their menu experience.
 
+The Casting Agency models a company that is responsible for creating movies and managing and assigning actors to those movies. You are an Executive Producer within the company and are creating a system to simplify and streamline your process.
 
+`Casting Assistant`
+
+- Can view actors and movies
+
+`Casting Director`
+
+- All permissions a Casting Assistant has and…
+- Add or delete an actor from the database
+- Modify actors or movies
+
+`Executive Producer`
+
+- All permissions a Casting Director has and…
+- Add or delete a movie from the database
+
+## Database Setup
+
+### Create Postgres Database
+
+```bash
+dropdb capstone
+createdb capstone
+```
+
+## Auth0 Setup
+
+### Create Auth0 Application
+
+![application](images//application.png)
+
+### Create Auth0 API and Permissions
+
+![api_permission](images//api_permissions.png)
+
+### Create Auth0 Roles and Users
+
+![role](images//role.png)
+
+Casting Assistant: `get:actors`, `get:actors-detail`, `get:movies`
+![permission_casting_assistant](images//permission_casting_assistant.png)
+
+Casting Director: `get:actors`, `get:actors-detail`, `get:movies`, `patch:actors`, `delete:actors`, `patch:movies`, `post:actors`
+![permission_casting_assistant](images//permission_casting_director.png)
+
+Executive Producer: Full Access
+![permission_manager](images//permission_executive_producer.png)
+
+### URL after deploying on the Render
+
+https://fsnd-686v.onrender.com
